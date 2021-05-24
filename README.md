@@ -3,7 +3,7 @@ A mod for The Long Dark.
 
 Wolves will only come out at night. You can set this to apply everywhere or choose region by region. 
 
-Works with [TimberwolvesEverywhere](https://github.com/ds5678/TimberwolvesAnywhere/releases) by ds5678, which I highly recommend!
+Works with [TimberwolvesAnywhere](https://github.com/ds5678/TimberwolvesAnywhere/releases) by ds5678, which I highly recommend!
 
 ## Requirements  
 [MelonLoader](https://github.com/HerpDerpinstine/MelonLoader/releases/latest/download/MelonLoader.Installer.exe)  
