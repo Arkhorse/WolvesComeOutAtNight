@@ -14,10 +14,7 @@ namespace WolvesComeOutAtNight
         {
             private static void Postfix(SpawnRegion __instance)
             {
-                if (__instance.m_AiSubTypeSpawned == AiSubType.Wolf)
-                { 
-                    GetSettings(__instance);
-                }
+                if (__instance.m_AiSubTypeSpawned == AiSubType.Wolf) GetSettings(__instance);
             }
         }
 
