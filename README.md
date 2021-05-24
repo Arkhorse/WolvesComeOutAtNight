@@ -1,6 +1,6 @@
 # WolvesComeOutAtNight
 A mod for The Long Dark. 
-Wolves will only come out at night. You can set this for everywhere or choose region by region.
+Wolves will only come out at night. You can set this to apply everywhere or choose region by region.
 
 ## Requirements  
 [MelonLoader](https://github.com/HerpDerpinstine/MelonLoader/releases/latest/download/MelonLoader.Installer.exe)  
