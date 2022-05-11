@@ -15,6 +15,10 @@ namespace WolvesComeOutAtNight
         [Description("Wolves only come out at night")]
         public bool ashCanyon = false;
 
+        [Name("Blackrock")]
+        [Description("Wolves only come out at night")]
+        public bool blackrock = false;
+
         [Name("Bleak Inlet")]
         [Description("Wolves only come out at night")]
         public bool bleakInlet = false;
@@ -71,6 +75,7 @@ namespace WolvesComeOutAtNight
         internal void RefreshFields()
         {
             SetFieldVisible(nameof(ashCanyon), !everywhere);
+            SetFieldVisible(nameof(blackrock), !everywhere);
             SetFieldVisible(nameof(bleakInlet), !everywhere);
             SetFieldVisible(nameof(brokenRailroad), !everywhere);
             SetFieldVisible(nameof(coastalHighway), !everywhere);

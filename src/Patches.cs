@@ -36,6 +36,7 @@ namespace WolvesComeOutAtNight
             else if (activeScene == "RuralRegion" && (Settings.settings.everywhere || Settings.settings.pleasantValley)) NoneDuringDay(spawnRegion);
             else if (activeScene == "TracksRegion" && (Settings.settings.everywhere || Settings.settings.brokenRailroad)) NoneDuringDay(spawnRegion);
             else if (activeScene == "WhalingStationRegion" && (Settings.settings.everywhere || Settings.settings.desolationPoint)) NoneDuringDay(spawnRegion);
+            else if (activeScene == "BlackrockRegion" && (Settings.settings.everywhere || Settings.settings.blackrock)) NoneDuringDay(spawnRegion);
         }
 
         private static void NoneDuringDay(SpawnRegion spawnRegion)
