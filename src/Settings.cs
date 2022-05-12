@@ -19,6 +19,11 @@ namespace WolvesComeOutAtNight
         [Description("Wolves only come out at night")]
         public bool blackrock = false;
 
+        [Name("Blackrock Prison")]
+        [Description("Wolves only come out at night")]
+        public bool blackrockPrison = false;
+
+
         [Name("Bleak Inlet")]
         [Description("Wolves only come out at night")]
         public bool bleakInlet = false;
