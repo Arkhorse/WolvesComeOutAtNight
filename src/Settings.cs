@@ -81,6 +81,7 @@ namespace WolvesComeOutAtNight
         {
             SetFieldVisible(nameof(ashCanyon), !everywhere);
             SetFieldVisible(nameof(blackrock), !everywhere);
+            SetFieldVisible(nameof(blackrockPrison), !everywhere);
             SetFieldVisible(nameof(bleakInlet), !everywhere);
             SetFieldVisible(nameof(brokenRailroad), !everywhere);
             SetFieldVisible(nameof(coastalHighway), !everywhere);
