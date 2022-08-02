@@ -23,7 +23,6 @@ namespace WolvesComeOutAtNight
         [Description("Wolves only come out at night")]
         public bool blackrockPrison = false;
 
-
         [Name("Bleak Inlet")]
         [Description("Wolves only come out at night")]
         public bool bleakInlet = false;
@@ -52,6 +51,14 @@ namespace WolvesComeOutAtNight
         [Description("Wolves only come out at night")]
         public bool hushedRiver = false;
 
+        [Name("Keeper's Pass North")]
+        [Description("Wolves only come out at night")]
+        public bool keepersPassNorth = false;
+
+        [Name("Keeper's Pass South")]
+        [Description("Wolves only come out at night")]
+        public bool keepersPassSouth = false;
+
         [Name("Mountain Town")]
         [Description("Wolves only come out at night")]
         public bool mountainTown = false;
@@ -72,6 +79,7 @@ namespace WolvesComeOutAtNight
         [Description("Wolves only come out at night")]
         public bool windingRiver = false;
 
+
         protected override void OnChange(FieldInfo field, object oldValue, object newValue)
         {
             if (field.Name == nameof(everywhere)) RefreshFields();
@@ -89,6 +97,8 @@ namespace WolvesComeOutAtNight
             SetFieldVisible(nameof(desolationPoint), !everywhere);
             SetFieldVisible(nameof(forlornMuskeg), !everywhere);
             SetFieldVisible(nameof(hushedRiver), !everywhere);
+            SetFieldVisible(nameof(keepersPassNorth), !everywhere);
+            SetFieldVisible(nameof(keepersPassSouth), !everywhere);
             SetFieldVisible(nameof(mountainTown), !everywhere);
             SetFieldVisible(nameof(mysteryLake), !everywhere);
             SetFieldVisible(nameof(pleasantValley), !everywhere);

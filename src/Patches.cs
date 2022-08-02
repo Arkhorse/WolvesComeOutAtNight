@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using HarmonyLib;
+using MelonLoader;
 
 namespace WolvesComeOutAtNight
 {
@@ -22,8 +23,11 @@ namespace WolvesComeOutAtNight
         {
             string activeScene = GameManager.m_ActiveScene;
             if (activeScene is null) return;
-
             if (activeScene == "AshCanyonRegion" && (Settings.settings.everywhere || Settings.settings.ashCanyon)) NoneDuringDay(spawnRegion);
+            else if (activeScene == "BlackrockPrisonSurvivalZone" && (Settings.settings.everywhere || Settings.settings.blackrockPrison)) NoneDuringDay(spawnRegion);
+            else if (activeScene == "BlackrockRegion" && (Settings.settings.everywhere || Settings.settings.blackrock)) NoneDuringDay(spawnRegion);
+            else if (activeScene == "BlackrockTransitionZone" && (Settings.settings.everywhere || Settings.settings.keepersPassNorth)) NoneDuringDay(spawnRegion);
+            else if (activeScene == "CanyonRoadTransitionZone" && (Settings.settings.everywhere || Settings.settings.keepersPassSouth)) NoneDuringDay(spawnRegion);
             else if (activeScene == "CanneryRegion" && (Settings.settings.everywhere || Settings.settings.bleakInlet)) NoneDuringDay(spawnRegion);
             else if (activeScene == "CoastalRegion" && (Settings.settings.everywhere || Settings.settings.coastalHighway)) NoneDuringDay(spawnRegion);
             else if (activeScene == "CrashMountainRegion" && (Settings.settings.everywhere || Settings.settings.timberwolfMountain)) NoneDuringDay(spawnRegion);
@@ -36,8 +40,7 @@ namespace WolvesComeOutAtNight
             else if (activeScene == "RuralRegion" && (Settings.settings.everywhere || Settings.settings.pleasantValley)) NoneDuringDay(spawnRegion);
             else if (activeScene == "TracksRegion" && (Settings.settings.everywhere || Settings.settings.brokenRailroad)) NoneDuringDay(spawnRegion);
             else if (activeScene == "WhalingStationRegion" && (Settings.settings.everywhere || Settings.settings.desolationPoint)) NoneDuringDay(spawnRegion);
-            else if (activeScene == "BlackrockRegion" && (Settings.settings.everywhere || Settings.settings.blackrock)) NoneDuringDay(spawnRegion);
-            else if (activeScene == "BlackrockPrisonSurvivalZone" && (Settings.settings.everywhere || Settings.settings.blackrockPrison)) NoneDuringDay(spawnRegion);
+
         }
 
         private static void NoneDuringDay(SpawnRegion spawnRegion)
