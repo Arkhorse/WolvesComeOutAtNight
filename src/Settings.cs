@@ -79,8 +79,15 @@ namespace WolvesComeOutAtNight
         [Description("Wolves only come out at night")]
         public bool windingRiver = false;
 
+        [Section("DLC")]
 
+        [Name("Forsaken Airfields")]
+        [Description("Wolves only come out at night")]
+        public bool AirfieldRegion = false;
+
+#pragma warning disable CS8765 // Nullability of type of parameter doesn't match overridden member (possibly because of nullability attributes).
         protected override void OnChange(FieldInfo field, object oldValue, object newValue)
+#pragma warning restore CS8765 // Nullability of type of parameter doesn't match overridden member (possibly because of nullability attributes).
         {
             if (field.Name == nameof(everywhere)) RefreshFields();
         }
@@ -104,12 +111,17 @@ namespace WolvesComeOutAtNight
             SetFieldVisible(nameof(pleasantValley), !everywhere);
             SetFieldVisible(nameof(timberwolfMountain), !everywhere);
             SetFieldVisible(nameof(windingRiver), !everywhere);
+
+            // DLC
+            SetFieldVisible(nameof(AirfieldRegion), !everywhere);
         }
     }
 
-internal static class Settings
+    internal static class Settings
     {
+#pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
         internal static WolvesComeOutAtNightSettings settings;
+#pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
         internal static void OnLoad()
         {
             settings = new WolvesComeOutAtNightSettings();
