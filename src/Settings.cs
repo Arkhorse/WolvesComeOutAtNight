@@ -4,7 +4,7 @@ using ModSettings;
 
 namespace WolvesComeOutAtNight
 {
-    class WolvesComeOutAtNightSettings : JsonModSettings
+    internal class WolvesComeOutAtNightSettings : JsonModSettings
     {
         [Section("Quick Settings")]
 
@@ -102,37 +102,36 @@ namespace WolvesComeOutAtNight
 
         internal void RefreshFields()
         {
-            SetFieldVisible(nameof(ashCanyon), !everywhere);
-            SetFieldVisible(nameof(blackrock), !everywhere);
-            SetFieldVisible(nameof(blackrockPrison), !everywhere);
-            SetFieldVisible(nameof(bleakInlet), !everywhere);
-            SetFieldVisible(nameof(brokenRailroad), !everywhere);
-            SetFieldVisible(nameof(coastalHighway), !everywhere);
-            SetFieldVisible(nameof(crumblingHighway), !everywhere);
-            SetFieldVisible(nameof(desolationPoint), !everywhere);
-            SetFieldVisible(nameof(forlornMuskeg), !everywhere);
-            SetFieldVisible(nameof(hushedRiver), !everywhere);
-            SetFieldVisible(nameof(keepersPassNorth), !everywhere);
-            SetFieldVisible(nameof(keepersPassSouth), !everywhere);
-            SetFieldVisible(nameof(mountainTown), !everywhere);
-            SetFieldVisible(nameof(mysteryLake), !everywhere);
-            SetFieldVisible(nameof(pleasantValley), !everywhere);
-            SetFieldVisible(nameof(timberwolfMountain), !everywhere);
-            SetFieldVisible(nameof(windingRiver), !everywhere);
+            SetFieldVisible(nameof(ashCanyon),          !everywhere || !modToggle);
+            SetFieldVisible(nameof(blackrock),          !everywhere || !modToggle);
+            SetFieldVisible(nameof(blackrockPrison),    !everywhere || !modToggle);
+            SetFieldVisible(nameof(bleakInlet),         !everywhere || !modToggle);
+            SetFieldVisible(nameof(brokenRailroad),     !everywhere || !modToggle);
+            SetFieldVisible(nameof(coastalHighway),     !everywhere || !modToggle);
+            SetFieldVisible(nameof(crumblingHighway),   !everywhere || !modToggle);
+            SetFieldVisible(nameof(desolationPoint),    !everywhere || !modToggle);
+            SetFieldVisible(nameof(forlornMuskeg),      !everywhere || !modToggle);
+            SetFieldVisible(nameof(hushedRiver),        !everywhere || !modToggle);
+            SetFieldVisible(nameof(keepersPassNorth),   !everywhere || !modToggle);
+            SetFieldVisible(nameof(keepersPassSouth),   !everywhere || !modToggle);
+            SetFieldVisible(nameof(mountainTown),       !everywhere || !modToggle);
+            SetFieldVisible(nameof(mysteryLake),        !everywhere || !modToggle);
+            SetFieldVisible(nameof(pleasantValley),     !everywhere || !modToggle);
+            SetFieldVisible(nameof(timberwolfMountain), !everywhere || !modToggle);
+            SetFieldVisible(nameof(windingRiver),       !everywhere || !modToggle);
 
             // DLC
-            SetFieldVisible(nameof(AirfieldRegion), !everywhere);
+            SetFieldVisible(nameof(AirfieldRegion),     !everywhere || !modToggle);
         }
     }
 
     internal static class Settings
     {
-#pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
-        internal static WolvesComeOutAtNightSettings settings;
-#pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
+
+        internal static readonly WolvesComeOutAtNightSettings settings = new();
+
         internal static void OnLoad()
         {
-            settings = new WolvesComeOutAtNightSettings();
             settings.RefreshFields();
             settings.AddToModSettings("Wolves Come Out At Night");
         }
