@@ -8,38 +8,38 @@ namespace WolvesComeOutAtNight
     public class WolvesComeOutAtNight : MelonMod
     {
         #region Mod Variables
-        // Used mostly for documentation and possible future expansion
-        List<string> Regions = new()
+        internal enum PredatorRegions
         {
-            "AshCanyonRegion",
-            "BlackrockPrisonSurvivalZone",
-            "BlackrockRegion",
-            "BlackrockTransitionZone",
-            "CanyonRoadTransitionZone",
-            "CanneryRegion",
-            "CoastalRegion",
-            "CrashMountainRegion",
-            "DamRiverTransitionZoneB",
-            "HighwayTransitionZone",
-            "LakeRegion",
-            "MarshRegion",
-            "MountainTownRegion",
-            "RiverValleyRegion",
-            "RuralRegion",
-            "TracksRegion",
-            "WhalingStationRegion",
-            "AirfieldRegion"
-        };
-        public static string activeScene = GameManager.m_ActiveScene;
+            AshCanyonRegion,
+            BlackrockPrisonSurvivalZone,
+            BlackrockRegion,
+            BlackrockTransitionZone,
+            CanyonRoadTransitionZone,
+            CanneryRegion,
+            CoastalRegion,
+            CrashMountainRegion,
+            DamRiverTransitionZoneB,
+            HighwayTransitionZone,
+            LakeRegion,
+            MarshRegion,
+            MountainTownRegion,
+            RiverValleyRegion,
+            RuralRegion,
+            TracksRegion,
+            WhalingStationRegion,
+            AirfieldRegion
+        }
+
+        internal static string activeScene = GameManager.m_ActiveScene;
         #endregion
-        private static void NoneDuringDay(SpawnRegion spawnRegion)
+        internal static void NoneDuringDay(SpawnRegion spawnRegion)
         {
             spawnRegion.m_MaxSimultaneousSpawnsDayInterloper = 0;
             spawnRegion.m_MaxSimultaneousSpawnsDayPilgrim = 0;
             spawnRegion.m_MaxSimultaneousSpawnsDayStalker = 0;
             spawnRegion.m_MaxSimultaneousSpawnsDayVoyageur = 0;
         }
-        public static void GetSettings(SpawnRegion spawnRegion)
+        internal static void GetSettings(SpawnRegion spawnRegion)
         {
             // if the current scene is null then dont run the code
             if (activeScene is null) return;
