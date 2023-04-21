@@ -7,7 +7,7 @@ using MelonLoader;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("WolvesComeOutAtNight")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Makes wolves only come out at night")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("WolvesComeOutAtNight")]
@@ -33,8 +33,7 @@ using MelonLoader;
 // You can specify all the values or you can default the Build and Revision Numbers
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.2.2")]
-[assembly: AssemblyFileVersion("1.2.2")]
-[assembly: MelonInfo(typeof(WolvesComeOutAtNight.Implementation), "WolvesComeOutAtNight", "1.2.2", "GruffCassquatch")]
+[assembly: AssemblyVersion("1.2.3.1")]
+[assembly: AssemblyFileVersion("1.2.3.1")]
+[assembly: MelonInfo(typeof(WolvesComeOutAtNight.Implementation), "WolvesComeOutAtNight", "1.2.3.1", "GruffCassquatch, The Illusion")]
 [assembly: MelonGame("Hinterland", "TheLongDark")]
-
