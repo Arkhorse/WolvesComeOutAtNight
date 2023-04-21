@@ -1,5 +1,5 @@
 # Wolves Come Out At Night
-A mod for The Long Dark. FOR GAME VERSION 2.00 / 2.02 (**PRE TALES FROM THE FAR TERRITORY**)    
+A mod for The Long Dark. PLEASE CHOOSE THE RIGHT VERSION TO MATCH YOUR GAME VERSION. GAME VERSION 2.02 IS PRE TALES FROM THE FAR TERRITORY (EXPANSION).    
 
 Wolves will only come out at night. You can set this to apply everywhere or choose region by region. 
 
