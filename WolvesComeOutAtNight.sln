@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31229.75
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33530.505
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WolvesComeOutAtNight", "WolvesComeOutAtNight.csproj", "{6AF64CC3-07E7-404E-A9AC-DB6ADABA479C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WolvesComeOutAtNight", "VisualStudio\WolvesComeOutAtNight.csproj", "{59C2279B-E2E2-4509-B675-01E75CBCDB69}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{6AF64CC3-07E7-404E-A9AC-DB6ADABA479C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6AF64CC3-07E7-404E-A9AC-DB6ADABA479C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6AF64CC3-07E7-404E-A9AC-DB6ADABA479C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6AF64CC3-07E7-404E-A9AC-DB6ADABA479C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59C2279B-E2E2-4509-B675-01E75CBCDB69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59C2279B-E2E2-4509-B675-01E75CBCDB69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59C2279B-E2E2-4509-B675-01E75CBCDB69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59C2279B-E2E2-4509-B675-01E75CBCDB69}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {6234699D-88C0-446C-B612-4104DA128DD6}
+		SolutionGuid = {F3FA9563-4C2D-4C34-8A6A-644A818A0958}
 	EndGlobalSection
 EndGlobal
