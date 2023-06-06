@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <!--This needs to be changed for the mod to compile.-->
+        <TheLongDarkPath>O:\SteamLibrary\steamapps\common\TheLongDark</TheLongDarkPath>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <!--This is the .NET version the mod will be compiled with. Don't change it.-->
+        <TargetFramework>net6.0</TargetFramework>
+
+        <!--This tells the compiler to use the latest C# version.-->
+        <LangVersion>Latest</LangVersion>
+
+        <!--This adds global usings for a few common System namespaces.-->
+        <ImplicitUsings>enable</ImplicitUsings>
+
+        <!--This enables nullable annotation and analysis. It's good coding form.-->
+        <Nullable>enable</Nullable>
+
+        <!--This tells the compiler to use assembly attributes instead of generating its own.-->
+        <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+
+        <!--PDB files are mostly useless for modding since they can't be loaded.-->
+        <DebugType>none</DebugType>
+    </PropertyGroup>
+
+
+  <!-- List of used references -->
+  <ItemGroup>
+		<!-- This is the base reference. MUST EXIST -->
+		<PackageReference Include="STBlade.Modding.TLD.Il2CppAssemblies.Windows"  Version="2.10.0"/>
+		<!-- This is only if you use the ModSettings -->
+		<PackageReference Include="STBlade.Modding.TLD.ModSettings"               Version="1.9.0"/>
+  </ItemGroup>
+
+  <!-- Most commonly used using's. Add to this so you dont need to define them in the cs files -->
+  <ItemGroup>
+    <Using Include="System.Reflection" />
+    <Using Include="Il2Cpp" />
+    <Using Include="HarmonyLib" />
+    <Using Include="MelonLoader" />
+    <Using Include="UnityEngine" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TheLongDarkPath>O:\Steam\steamapps\common\TheLongDark</TheLongDarkPath> <!-- This should point to wherever your games primary EXE is -->
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>embedded</DebugType>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DebugType>embedded</DebugType>
+  </PropertyGroup>
+
+  <!-- This is a build event. It will copy your dll to the currently defined TheLongDarkPath's Mods folder -->
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="xcopy /y &quot;$(BaseOutputPath)\$(Configuration)\net6.0\$(AssemblyName).dll&quot; &quot;$(TheLongDarkPath)\Mods&quot;" />
+  </Target>
+
+</Project>
